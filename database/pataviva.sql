@@ -4,14 +4,34 @@ USE pataviva;
 -- TABELA USUARIOS
 CREATE TABLE usuarios (
     usuario_id int AUTO_INCREMENT PRIMARY KEY,
+
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(14) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
     telefone VARCHAR(20),
-    senha VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-); 
 
+    senha VARCHAR(255) NOT NULL,
+
+    data_nascimento DATE,
+
+    cep VARCHAR(10),
+    rua VARCHAR(100),
+    numero VARCHAR(20),
+    bairro VARCHAR(100),
+    cidade VARCHAR(100),
+    estado VARCHAR(50),
+
+    tipo_moradia ENUM('casa', 'apartamento'),
+    situacao_imovel ENUM('proprio', 'alugado'),
+
+    possui_quintal BOOLEAN,
+    possui_telas BOOLEAN,
+    possui_outros_animais BOOLEAN,
+
+    experiencia_animais TEXT,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 -- TABELA ANIMAIS 
 CREATE TABLE animais(
     animal_id INT AUTO_INCREMENT PRIMARY KEY,
