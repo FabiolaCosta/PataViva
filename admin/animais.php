@@ -120,6 +120,7 @@ $resultAnimais = $conn->query($sqlAnimais);
                     <p><strong>Porte:</strong> <?php echo $animal['porte']; ?></p>
                     <p><strong>Idade:</strong> <?php echo $animal['idade']; ?> anos</p>
                     <p><strong>Sexo:</strong> <?php echo $animal['sexo']; ?></p>
+                    <p><strong>Status:</strong> <?php echo $animal['status']; ?></p>
                     <p><strong>Descrição:</strong> <?php echo $animal['descricao']; ?></p>
 
                 </div>
