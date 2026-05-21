@@ -611,3 +611,82 @@ font-size: 15px;
 .cadastro-card button:hover {
   background-color: #8B5E3C;
 }
+
+
+/* PAGINA DE ADOÇÃO */
+.adocao-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(92,58,40,0.7), rgba(92,58,40,0.7)),
+              url('https://revistaoeste.com/oestegeral/wp-content/uploads/2025/06/cachorro-e-gato.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #F5EFE6;
+}
+
+.adocao-hero h1 {
+  font-size: 48px;
+}
+
+.adocao-hero p {
+  font-size: 18px;
+}
+
+.container-animais{
+  margin: 0 5%;  
+}
+
+.lista-animais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* CARD DO ANIMAL */
+.animal-card {
+  width: 250px;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.animal-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.animal-card h3 {
+  margin-bottom: 5px;
+}
+
+.animal-card p {
+  font-size: 15px;
+  color: #5C3A28;
+}
+
+.btn-adotar {
+  background-color: #A67C52;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-adotar:hover {
+  background-color: #8B5E3C;
+}
