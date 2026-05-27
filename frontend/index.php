@@ -1,0 +1,239 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PataViva</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="PataViva Logo" class="logo">
+
+    <nav>
+      <a href="index.php">Início</a>
+            <a href="adocao.php">Adoção</a>
+            <a href="#">Como Ajudar</a>
+            <a href="sobre.php">Sobre</a>
+            <a href="#contato">Contato</a>
+
+            <?php if(isset($_SESSION['usuario'])): ?>
+
+  <a href="perfil.php" class="login-btn">
+    <?php echo $_SESSION['usuario']; ?>
+  </a>
+
+<?php else: ?>
+
+  <a href="login.php" class="login-btn">Login</a>
+
+<?php endif; ?>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Ajude a transformar vidas </h1>
+      <p>Na PataViva, resgatamos, cuidamos e encontramos lares cheios de amor para animais que precisam.</p>
+      <button class="btn">Saiba como ajudar</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Como você pode ajudar</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Adote</h3>
+        <p>Dê um lar cheio de amor para um animal resgatado.</p>
+      </div>
+
+      <div class="card">
+        <h3>Doe</h3>
+        <p>Contribua para alimentação e cuidados.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seja voluntário</h3>
+        <p>Ajude diretamente nas atividades da ONG.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSÃO / VISÃO -->
+  <section class="about">
+    <div class="about-container">
+
+      <div class="about-logo">
+        <img src="logo.png" alt="PataViva" class="logo">
+      </div>
+
+      <div class="about-text">
+        <h2>Missão</h2>
+        <p>
+          A PataViva é uma ONG sem fins lucrativos que tem como missão ser a voz dos animais,
+          lutando por seus direitos e oferecendo cuidado e proteção para aqueles em situação de abandono.
+        </p>
+
+        <h2>Visão</h2>
+        <p>
+          Ser reconhecida como uma das principais ONGs de proteção animal do país,
+          promovendo um futuro com mais respeito e responsabilidade.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="values">
+      <h2>Valores e transformação</h2>
+      <p>
+        Atuamos com amor, responsabilidade e compromisso com o bem-estar animal.
+        Incentivamos a adoção responsável, a conscientização da sociedade e a importância
+        da castração para reduzir o abandono. Acreditamos que juntos podemos transformar
+        vidas — tanto dos animais quanto das pessoas.
+      </p>
+    </div>
+  </section>
+
+  <!-- EIXOS -->
+  <section class="eixos">
+    <div class="eixos-overlay">
+
+      <h2>Eixos de atuação</h2>
+
+      <div class="eixos-cards">
+
+        <!-- RESGATE -->
+        <div class="eixo">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C14 4 15 7 15 9C15 11 14 12 12 12C10 12 9 11 9 9C9 7 10 4 12 2Z"/>
+              <circle cx="6" cy="15" r="2"/>
+              <circle cx="18" cy="15" r="2"/>
+              <circle cx="9" cy="19" r="2"/>
+              <circle cx="15" cy="19" r="2"/>
+            </svg>
+          </div>
+          <h3>Resgate</h3>
+          <p>
+            Atuamos no resgate de animais em situação de abandono e risco,
+            oferecendo os primeiros cuidados e garantindo segurança.
+          </p>
+        </div>
+
+        <!-- ADOÇÃO -->
+        <div class="eixo">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s-7-4.5-9.5-8C-1 8 3 3 8 6c1.5 1 2.5 2.5 4 4 1.5-1.5 2.5-3 4-4 5-3 9 2 5.5 7-2.5 3.5-9.5 8-9.5 8z"/>
+            </svg>
+          </div>
+          <h3>Adoção</h3>
+          <p>
+            Promovemos a adoção responsável, conectando animais resgatados
+            a famílias que possam oferecer amor e cuidado.
+          </p>
+        </div>
+
+        <!-- CONSCIENTIZAÇÃO -->
+        <div class="eixo">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 11v2a4 4 0 004 4h1l5 4V3L8 7H7a4 4 0 00-4 4z"/>
+              <path d="M16 9a4 4 0 010 6"/>
+            </svg>
+          </div>
+          <h3>Conscientização</h3>
+          <p>
+            Incentivamos a educação sobre posse responsável e a importância
+            da castração para reduzir o abandono.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="numeros">
+    <div class="numeros-container">
+
+      <div class="numeros-texto">
+        <h2>Nossos números</h2>
+
+        <p>
+          Desde 2020, a PataViva atua no resgate, cuidado e proteção de animais
+          em situação de abandono. Ao longo dos anos, já conseguimos transformar
+          a vida de centenas de cães e gatos, oferecendo uma nova chance com amor e dignidade.
+        </p>
+
+        <p>
+          Nosso trabalho vai além do resgate: promovemos a adoção responsável,
+          incentivamos a castração e buscamos conscientizar a sociedade sobre
+          o cuidado com os animais.
+        </p>
+
+        <p>
+          Cada número representa uma vida salva e uma história transformada —
+          e seguimos firmes para ajudar ainda mais.
+        </p>
+      </div>
+
+      <div class="numeros-dados">
+
+        <div class="numero">
+          <h3>850</h3>
+          <span>Animais resgatados</span>
+        </div>
+
+        <div class="numero">
+          <h3>620</h3>
+          <span>Animais adotados</span>
+        </div>
+
+        <div class="numero">
+          <h3>120</h3>
+          <span>Animais em tratamento</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+<footer class="rodape-pata-viva" id="contato">
+<div class="container-footer">
+
+<div class="bloco-logo">
+<img src="logo.png" alt="Logo Pata Viva" class="logo-rodape">
+<p>Organização de Amparo Animal</p>
+</div>
+
+<div class="bloco-info">
+<p><strong>Dúvidas e contato:</strong></p>
+<p>contato@pataviva.org.br</p>
+<p>São Paulo - SP</p>
+</div>
+
+</div>
+
+
+  <footer>
+    <p>© 2026 PataViva - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
+
+
+
