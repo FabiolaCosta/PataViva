@@ -74,3 +74,15 @@ CREATE TABLE administrador (
 --senha pataviva123
 INSERT INTO administrador (email, senha) VALUES
 ('pataviva.admin@gmail.com', '$2y$10$MO91exLB7HljUuEqJ1LDDOlNvYN/NMBcYasuupuFvJcw7aAaeSft6'); 
+
+CREATE TABLE doacoes (
+    doacao_id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NULL,
+    valor DECIMAL(10,2) NOT NULL,
+    pix_feito ENUM('sim','nao') NOT NULL,
+    dt_doacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE doacoes
+ADD CONSTRAINT fk_usuario_doacao
+FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id);
