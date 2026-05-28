@@ -29,9 +29,9 @@ if (!isset($_SESSION["usuario"])) {
     <nav>
       <a href="index.php">Início</a>
       <a href="adocao.php">Adoção</a>
-      <a href="#">Como Ajudar</a>
-      <a href="sobre.php">Sobre</a>
-      <a href="#contato">Contato</a>
+            <a href="como.php">Como Ajudar</a>
+            <a href="sobre.php">Sobre</a>
+            <a href="#contato">Contato</a>
 
       <a href="perfil.php" class="login-btn">
         <?php echo $_SESSION["usuario"]; ?>
@@ -73,8 +73,7 @@ if (!isset($_SESSION["usuario"])) {
 
         <h2>Alterar Senha</h2>
 
-        <form action="alterar_senha.php" method="POST" class="senha-form">
-
+         <form action="back_end_cli/alterar_senha.php" method="POST" class="senha-form">
           <input 
             type="password" 
             name="senha_atual"
