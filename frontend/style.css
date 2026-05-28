@@ -6,27 +6,30 @@
 }
 
 body {
-  background-color: #F5EFE6;
+  background-color: #f5e6e6;
   color: #5C3A28;
 }
 
-/* HEADER */
+
+
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 
-  padding: 10px 60px;
 
-  background-color: #F5EFE6;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+padding: 10px 60px;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+background-color: #F5EFE6;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+position: fixed; 
+top: 0; 
+left: 0; 
+width: 100%; 
+z-index: 1000; 
 }
+
 
 header img {
   height: 60px;
@@ -44,7 +47,301 @@ nav a:hover {
   color: #A67C52;
 }
 
-/* BOTÃO LOGIN */
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(92,58,40,0.6), rgba(92,58,40,0.6)),
+              url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131') center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #F5EFE6;
+}
+
+.btn {
+  background-color: #A67C52;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #8B5E3C;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ABOUT */
+.about {
+  background-color: #A67C52;
+  color: #F5EFE6;
+  padding: 80px 60px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-logo img {
+  width: 250px;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.about-text p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* VALUES */
+.values {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.values h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.values p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* EIXOS */
+.eixos {
+  background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') center/cover no-repeat;
+  position: relative;
+  padding: 100px 60px;
+  color: white;
+}
+
+.eixos-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 60px;
+  border-radius: 10px;
+}
+
+.eixos h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.eixos-cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.eixo {
+  max-width: 300px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #A67C52;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.eixo h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.eixo p {
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* NÚMEROS */
+.numeros {
+  background-color: #EDE7DF;
+  padding: 100px 60px;
+}
+
+.numeros-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.numeros-texto {
+  max-width: 600px;
+}
+
+.numeros-texto h2 {
+  font-size: 36px;
+  color: #5C3A28;
+  margin-bottom: 20px;
+}
+
+.numeros-texto p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* DADOS */
+.numeros-dados {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+
+.numero h3 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.numero:nth-child(1) h3 {
+  color: #5C3A28;
+}
+
+.numero:nth-child(2) h3 {
+  color: #A67C52;
+}
+
+.numero:nth-child(3) h3 {
+  color: #8B5E3C;
+}
+
+.numero span {
+  font-size: 18px;
+  color: #5C3A28;
+}
+
+/* FOOTER */
+footer {
+  background-color: #5C3A28;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+}
+
+.about-logo img{
+  width: 600px;
+  height: auto;
+}
+
+body {
+background-color: #F5EFE6;
+color: #5C3A28;
+
+
+padding-top: 125px;
+}
+
+.rodape-pata-viva {
+background-color: #4a2525; 
+color: #ffffff;
+padding: 30px 0;
+font-family: Arial, sans-serif;
+}
+
+.container-footer {
+display: flex; 
+justify-content: center; /* Centraliza no meio da tela */
+align-items: center; 
+gap: 75px; 
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.logo-rodape {
+width: 250px; 
+height: auto;
+display: block;
+margin: 0 auto 0px; /* Arruma e centraliza a logo */
+}
+
+.bloco-logo {
+text-align: center;
+}
+
+.bloco-info p {
+margin: 5px 0;
+font-size: 15px;
+}
+
 .login-btn {
   background-color: #A67C52;
   color: white;
@@ -59,16 +356,350 @@ nav a:hover {
   background-color: #8B5E3C;
 }
 
-/* =========================
-   PERFIL
-========================= */
+
+/*Página de login*/
+.login-page {
+  background-color: #F5EFE6;
+}
+
+.login-page .login-container {
+  min-height: calc(100vh - 120px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page .login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page .login-card {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-page .login-card h2 {
+  margin-bottom: 25px;
+  color: #5C3A28;
+}
+
+.login-page .login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-page .login-card input:focus {
+  border-color: #A67C52;
+}
+
+.login-page .login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #A67C52;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-page .login-card button:hover {
+  background-color: #8B5E3C;
+}
+
+.login-page .forgot {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #8B5E3C;
+  transition: 0.3s;
+}
+
+.login-page .forgot:hover {
+  color: #A67C52;
+}
+
+/*fim da pagina login*/
+
+/* pagina sobre */
+.sobre-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(92,58,40,0.7), rgba(92,58,40,0.7)),
+              url('https://images.unsplash.com/photo-1558788353-f76d92427f16') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #F5EFE6;
+}
+
+.sobre-hero h1 {
+  font-size: 48px;
+}
+
+.sobre-hero p {
+  font-size: 18px;
+}
+
+.sobre-section {
+  padding: 80px 60px;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-texto h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.sobre-texto p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.sobre-imagem img {
+  width: 400px;
+  border-radius: 15px;
+}
+
+.sobre-mvv {
+  background-color: #A67C52;
+  padding: 60px;
+  color: #F5EFE6;
+}
+
+.mvv-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mvv-card {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 280px;
+  text-align: center;
+}
+
+.equipe {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.equipe h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.equipe-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.membro img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.membro h3 {
+  margin: 5px 0;
+}
+
+.cta {
+  background-color: #5C3A28;
+  color: #F5EFE6;
+  text-align: center;
+  padding: 60px;
+}
+
+.cta .btn {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/*fim da página sobre*/
+
+/*página de cadastro*/
+
+.cadastro-page {
+  padding-top: 120px;
+  background-color: #F5EFE6;
+}
+
+.cadastro-container {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.cadastro-card {
+  background: white;
+  padding: 40px;
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.cadastro-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cadastro-card h3 {
+  margin: 20px 0 10px;
+  color: #5C3A28;
+}
+
+.cadastro-card input,
+.cadastro-card select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.checkbox input {
+  margin-right: 10px;
+}
+
+.cadastro-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #A67C52;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.cadastro-card button:hover {
+  background-color: #8B5E3C;
+}
+
+
+/* PAGINA DE ADOÇÃO */
+.adocao-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(92,58,40,0.7), rgba(92,58,40,0.7)),
+              url('https://revistaoeste.com/oestegeral/wp-content/uploads/2025/06/cachorro-e-gato.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #F5EFE6;
+}
+
+.adocao-hero h1 {
+  font-size: 48px;
+}
+
+.adocao-hero p {
+  font-size: 18px;
+}
+
+.container-animais{
+  margin: 0 5%;  
+}
+
+.lista-animais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* CARD DO ANIMAL */
+.animal-card {
+  width: 250px;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.animal-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.animal-card h3 {
+  margin-bottom: 5px;
+}
+
+.animal-card p {
+  font-size: 15px;
+  color: #5C3A28;
+}
+
+.btn-adotar {
+  background-color: #A67C52;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-adotar:hover {
+  background-color: #8B5E3C;
+}
+
+
+/* PÁGINA DE PERFIL */
 
 .perfil-page {
   background-color: #F5EFE6;
 }
 
 .perfil-section {
-  padding: 140px 20px 60px; /* corrigido por causa do header fixo */
+  padding: 60px 20px;
 }
 
 .perfil-container {
@@ -81,12 +712,14 @@ nav a:hover {
 }
 
 /* CARDS */
+
 .perfil-card {
   background: white;
   border-radius: 20px;
   padding: 35px;
 
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
   transition: 0.3s;
 }
 
@@ -101,6 +734,7 @@ nav a:hover {
 }
 
 /* INFO USUÁRIO */
+
 .perfil-info {
   display: flex;
   flex-wrap: wrap;
@@ -111,6 +745,7 @@ nav a:hover {
   background-color: #F5EFE6;
   padding: 20px;
   border-radius: 15px;
+
   min-width: 250px;
 
   display: flex;
@@ -129,6 +764,7 @@ nav a:hover {
 }
 
 /* FORM SENHA */
+
 .senha-form {
   display: flex;
   flex-direction: column;
@@ -139,8 +775,11 @@ nav a:hover {
   padding: 14px;
   border-radius: 10px;
   border: 1px solid #d8d8d8;
+
   outline: none;
+
   transition: 0.3s;
+
   font-size: 15px;
 }
 
@@ -152,12 +791,18 @@ nav a:hover {
 .senha-form button {
   background-color: #A67C52;
   color: white;
+
   border: none;
+
   padding: 14px;
+
   border-radius: 30px;
+
   cursor: pointer;
+
   font-size: 16px;
   font-weight: 500;
+
   transition: 0.3s;
 }
 
@@ -166,6 +811,7 @@ nav a:hover {
 }
 
 /* ANIMAIS ADOTADOS */
+
 .animais-adotados {
   display: flex;
   flex-wrap: wrap;
@@ -174,10 +820,15 @@ nav a:hover {
 
 .animal-item {
   background-color: #F5EFE6;
+
   padding: 15px 20px;
+
   border-radius: 12px;
+
   font-weight: 500;
+
   color: #5C3A28;
+
   transition: 0.3s;
 }
 
@@ -187,6 +838,7 @@ nav a:hover {
 }
 
 /* LOGOUT */
+
 .logout-card {
   text-align: center;
 }
@@ -198,12 +850,18 @@ nav a:hover {
 
 .logout-btn {
   display: inline-block;
+
   background-color: #8B5E3C;
   color: white;
+
   padding: 14px 35px;
+
   border-radius: 30px;
+
   text-decoration: none;
+
   transition: 0.3s;
+
   font-weight: 500;
 }
 
@@ -212,110 +870,10 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* =========================
-   FOOTER CORRIGIDO
-========================= */
-
-.rodape-pata-viva {
-  background-color: #4a2525;
-  color: #ffffff;
-  padding: 30px 0;
-  font-family: Arial, sans-serif;
-}
-
-.container-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 75px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.logo-rodape {
-  width: 250px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.bloco-logo {
-  text-align: center;
-}
-
-.bloco-info p {
-  margin: 5px 0;
-  font-size: 15px;
-}
-
-/* footer genérico SOMENTE para outros rodapés */
-footer:not(.rodape-pata-viva) {
-  background-color: #5C3A28;
-  color: white;
-  text-align: center;
-  padding: 30px;
-  margin-top: 50px;
-}
-
-/* =========================
-   LOGIN
-========================= */
-
-.login-page {
-  background-color: #F5EFE6;
-}
-
-.login-page .login-container {
-  min-height: calc(100vh - 120px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.login-page .login-card {
-  background: white;
-  padding: 40px;
-  width: 350px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.login-page .login-card h2 {
-  margin-bottom: 25px;
-}
-
-.login-page .login-card input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.login-page .login-card button {
-  width: 100%;
-  padding: 12px;
-  background-color: #A67C52;
-  color: white;
-  border: none;
-  border-radius: 25px;
-}
-
-.login-page .login-card button:hover {
-  background-color: #8B5E3C;
-}
-
-.login-page .forgot {
-  display: block;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #8B5E3C;
-}
-
 /* RESPONSIVO */
+
 @media (max-width: 768px) {
+
   .perfil-card {
     padding: 25px;
   }
@@ -327,4 +885,258 @@ footer:not(.rodape-pata-viva) {
   .info-item {
     width: 100%;
   }
+
+}
+
+/* =========================
+   PÁGINA DE DOAÇÃO
+========================= */
+
+.doacao-page {
+  background-color: #F5EFE6;
+}
+
+/* HERO */
+
+.doacao-hero {
+  height: 55vh;
+
+  background:
+    linear-gradient(rgba(92,58,40,0.75), rgba(92,58,40,0.75)),
+    url('https://images.unsplash.com/photo-1517849845537-4d257902454a')
+    center/cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+}
+
+.doacao-overlay {
+  max-width: 700px;
+  padding: 20px;
+}
+
+.doacao-overlay h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.doacao-overlay p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* CONTAINER */
+
+.doacao-section {
+  padding: 80px 20px;
+}
+
+.doacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* TEXTO */
+
+.doacao-info {
+  flex: 1;
+  min-width: 320px;
+}
+
+.doacao-info h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.doacao-info p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* DADOS */
+
+.doacao-dados {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.dado {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+
+  min-width: 180px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+  text-align: center;
+}
+
+.dado h3 {
+  font-size: 38px;
+  color: #A67C52;
+}
+
+.dado span {
+  color: #5C3A28;
+}
+
+/* CARD DOAÇÃO */
+
+.doacao-card {
+  width: 380px;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.doacao-card h2 {
+  margin-bottom: 20px;
+}
+
+.doacao-card p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* QR CODE */
+
+.qr-code {
+  width: 250px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+/* PIX */
+
+.pix-info {
+  background-color: #F5EFE6;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  margin-bottom: 25px;
+}
+
+.pix-info span {
+  display: block;
+  margin-bottom: 5px;
+  color: #8B5E3C;
+}
+
+.pix-info strong {
+  color: #5C3A28;
+}
+
+/* BOTÃO */
+
+.btn-doar {
+  background-color: #A67C52;
+  color: white;
+
+  border: none;
+
+  padding: 14px 30px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.btn-doar:hover {
+  background-color: #8B5E3C;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+  .doacao-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doacao-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .doacao-overlay h1 {
+    font-size: 38px;
+  }
+
+}
+
+/*modal doações*/
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.6);
+
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+
+  width: 350px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.btn-cancel {
+  background: gray;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 20px;
 }
