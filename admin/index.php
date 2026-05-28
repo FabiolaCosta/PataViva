@@ -5,6 +5,33 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 require '../backend/auth.php';
+require '../backend/conexao.php';
+
+$sql_animais = "SELECT COUNT(*) AS total FROM animais";
+
+$result_animais = $conn->query($sql_animais);
+
+$total_animais = 0;
+
+if ($result_animais && $result_animais->num_rows > 0) {
+
+    $dados_animais = $result_animais->fetch_assoc();
+
+    $total_animais = $dados_animais["total"];
+}
+
+$sql_adocoes = "SELECT COUNT(*) AS total FROM adocoes";
+
+$result_adocoes = $conn->query($sql_adocoes);
+
+$total_adocoes = 0;
+
+if ($result_adocoes && $result_adocoes->num_rows > 0) {
+
+    $dados_adocoes = $result_adocoes->fetch_assoc();
+
+    $total_adocoes = $dados_adocoes["total"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -48,12 +75,12 @@ require '../backend/auth.php';
       <section class="cards">
         <div class="card">
           <h3>Animais cadastrados</h3>
-          <p>24</p>
+          <p><?php echo $total_animais; ?></p>
         </div>
 
         <div class="card">
           <h3>Adoções realizadas</h3>
-          <p>12</p>
+          <p><?php echo $total_adocoes; ?></p>
         </div>
 
         <div class="card">
