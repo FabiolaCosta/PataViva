@@ -25,11 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password_verify($senha, $usuario["senha"])) {
 
-            $_SESSION["usuario_id"] = $usuario["id"];
-            $_SESSION["usuario"] = $usuario["nome"];
+    $_SESSION["usuario_id"] = $usuario["usuario_id"];
+    $_SESSION["usuario"] = $usuario["nome"];
 
-            header("Location: index.php");
-            exit;
+    header("Location: index.php");
+    exit;
+}
 
         } else {
 
@@ -65,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <nav>
       <a href="index.php">Início</a>
             <a href="adocao.php">Adoção</a>
-            <a href="#">Como Ajudar</a>
+            <a href="como.php">Como Ajudar</a>
             <a href="sobre.php">Sobre</a>
             <a href="#contato">Contato</a>
 
