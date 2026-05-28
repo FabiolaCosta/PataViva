@@ -22,7 +22,7 @@ session_start();
     <nav>
      <a href="index.php">Início</a>
             <a href="adocao.php">Adoção</a>
-            <a href="#">Como Ajudar</a>
+            <a href="como.php">Como Ajudar</a>
             <a href="sobre.php">Sobre</a>
             <a href="#contato">Contato</a>
 
