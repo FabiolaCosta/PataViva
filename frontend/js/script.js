@@ -44,7 +44,7 @@ function exibirAnimais(animais) {
             <p><strong>Sexo:</strong> ${animal.sexo}</p>
             <p><strong>Descrição:</strong> ${animal.descricao}</p>
             <br>
-            <a href="#" class="btn-adotar">Quero Adotar</a>
+            <a href="back_end_cli/solicitar_adocao.php?animal_id=${animal.animal_id}" class="btn-adotar">Quero Adotar</a>
             <br>
         `;
 

@@ -76,9 +76,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     if ($stmt->execute()) {
-        echo "Cadastro realizado com sucesso!";
+        echo "<script>alert('Cadastro realizado com sucesso!'); window.location='../login.php';</script>";
+        exit;
     } else {
-        echo "Erro: " . $stmt->error;
+        echo "<script>alert('Erro ao realizar cadastro!'); window.location='../login.php';</script>";
+        exit;
     }
 
     $stmt->close();

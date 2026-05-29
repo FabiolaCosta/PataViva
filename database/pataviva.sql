@@ -71,10 +71,6 @@ CREATE TABLE administrador (
     senha VARCHAR(255) NOT NULL
 ); 
 
---senha pataviva123
-INSERT INTO administrador (email, senha) VALUES
-('pataviva.admin@gmail.com', '$2y$10$MO91exLB7HljUuEqJ1LDDOlNvYN/NMBcYasuupuFvJcw7aAaeSft6'); 
-
 CREATE TABLE doacoes (
     doacao_id INT AUTO_INCREMENT PRIMARY KEY,
     usuario_id INT NULL,
@@ -86,3 +82,13 @@ CREATE TABLE doacoes (
 ALTER TABLE doacoes
 ADD CONSTRAINT fk_usuario_doacao
 FOREIGN KEY (usuario_id) REFERENCES usuarios(usuario_id);
+
+
+-- senha pataviva123
+INSERT INTO administrador (email, senha) VALUES
+('pataviva.admin@gmail.com', '$2y$10$MO91exLB7HljUuEqJ1LDDOlNvYN/NMBcYasuupuFvJcw7aAaeSft6'); 
+
+insert into animais (nome, especie, sexo, porte, idade, descricao, foto) values
+('Pipoca', 'Cachorro', 'm', 'grande', 5, 'Pipoca é um cachorro amigável e leal. Ele adora brincar no parque e é ótimo com crianças.', '../uploads/6a0e4a4f86705_pipoca.png'),
+('Jade', 'Gato', 'f', 'pequeno', 3, 'Jade é uma gata carinhosa e tranquila. Ela gosta de ficar no colo e é perfeita para quem busca um companheiro calmo.', '../uploads/6a0e4a9cbd31f_jade.png'),
+('Luna', 'Cachorro', 'f', 'medio', 2, 'Luna é uma cachorra energética e brincalhona. Ela adora correr e se divertir ao ar livre.', '../uploads/6a18c21c4c678_luna.jpg');
