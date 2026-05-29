@@ -37,7 +37,7 @@
 
 /* ABA DE CADASTRO */
 
-.card {
+#cadastro .card {
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -131,4 +131,160 @@
 .animal-card p {
     font-size: 13px;
     color: #555;
+}
+
+/* TELA DE ADOÇÃO */
+
+/* FILTROS */
+
+.filtros{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filtros input,
+.filtros select{
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.filtros input{
+    width: 320px;
+}
+
+.filtros button{
+    background: #002b5b;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtros button:hover{
+    background: #004080;
+}
+
+/* TABELA */
+
+.tabela-container{
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-top: 40px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background: #f8f8f8;
+}
+
+thead th{
+    padding: 18px;
+    text-align: left;
+    font-size: 15px;
+    color: #444;
+}
+
+tbody td{
+    padding: 18px;
+    border-top: 1px solid #eee;
+    color: #333;
+}
+
+/* BADGES */
+
+.badge{
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.badge.pendente{
+    background: #fff3cd;
+    color: #856404;
+}
+
+.badge.aprovado{
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge.negado{
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* AÇÕES */
+
+.acoes{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-aprovar,
+.btn-negar,
+.btn-detalhes{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-aprovar{
+    background: #34a853;
+}
+
+.btn-aprovar:hover{
+    background: #2d8e49;
+}
+
+.btn-negar{
+    background: #ea4335;
+}
+
+.btn-negar:hover{
+    background: #cf3c2f;
+}
+
+.btn-detalhes{
+    background: #4285f4;
+}
+
+.btn-detalhes:hover{
+    background: #3574d4;
+}
+
+.modal-usuario {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.modal-usuario .secao {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.modal-usuario h4 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.modal-usuario p {
+    margin: 5px 0;
+    line-height: 1.5;
 }

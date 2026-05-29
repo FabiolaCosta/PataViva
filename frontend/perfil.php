@@ -5,6 +5,33 @@ if (!isset($_SESSION["usuario"])) {
     header("Location: login.php");
     exit;
 }
+
+require 'back_end_cli/conexao.php';
+
+// Busca as solicitações de adoção do usuário
+$sqlSolicitacao = "SELECT animais.nome, animais.especie, animais.sexo, animais.porte, animais.idade, animais.descricao, animais.foto, solicitacoes.status
+                    FROM solicitacoes 
+                    JOIN animais ON solicitacoes.animal_id = animais.animal_id
+                    WHERE solicitacoes.usuario_id = ? AND solicitacoes.status in('pendente', 'negado')";
+
+$stmtSolicitacao = $conn->prepare($sqlSolicitacao);
+$stmtSolicitacao->bind_param("i", $_SESSION["usuario_id"]);
+$stmtSolicitacao->execute();
+$resultSolicitacoes = $stmtSolicitacao->get_result();
+
+// Busca os animais adotados pelo usuário
+$sqlAdotados = "SELECT animais.nome, animais.especie, animais.sexo, animais.porte, animais.idade, animais.descricao, animais.foto 
+                FROM adocoes 
+                JOIN solicitacoes ON adocoes.sol_id = solicitacoes.sol_id
+                JOIN animais ON solicitacoes.animal_id = animais.animal_id
+                WHERE solicitacoes.usuario_id = ? AND solicitacoes.status = 'aprovado'";
+
+$stmtAdotados = $conn->prepare($sqlAdotados);
+$stmtAdotados->bind_param("i", $_SESSION["usuario_id"]);
+$stmtAdotados->execute();
+$resultAdotados = $stmtAdotados->get_result();  
+
+
 ?>
 
 <!DOCTYPE html>
@@ -109,24 +136,51 @@ if (!isset($_SESSION["usuario"])) {
         <h2>Animais Adotados</h2>
 
         <div class="animais-adotados">
-
-          <!-- EXEMPLOS -->
-          <!-- depois você pode puxar isso do banco -->
-
-          <div class="animal-item">
-            🐶 Thor
-          </div>
-
-          <div class="animal-item">
-            🐱 Luna
-          </div>
-
-          <div class="animal-item">
-            🐶 Bob
-          </div>
-
+          <?php if ($resultAdotados->num_rows === 0): ?>
+            <p>Você não tem animais adotados.</p>
+          <?php endif; ?>
+          
+          <?php while ($animal = $resultAdotados->fetch_assoc()): ?>
+            <div class="animal-item animal-card">
+              <div class="animal-card-image">
+                <img src="<?= htmlspecialchars($animal['foto']) ?>" alt="<?= htmlspecialchars($animal['nome']) ?>">
+              </div>
+              <div class="animal-card-content">
+                <strong><?= htmlspecialchars($animal['nome']) ?></strong>
+                <p><strong>Espécie:</strong> <?= htmlspecialchars($animal['especie']) ?></p>
+                <p><strong>Porte:</strong> <?= htmlspecialchars($animal['porte']) ?></p>
+                <p><strong>Idade:</strong> <?= htmlspecialchars($animal['idade']) ?> anos</p>                
+              </div>
+            </div>
+          <?php endwhile; ?>   
         </div>
+      </div>
 
+      <!-- SOLICITAÇÃO DE ADOÇÃO -->
+      <div class="perfil-card">
+
+        <h2>Solicitações de Adoção</h2>
+
+        <div class="animais-adotados">
+          <?php if ($resultSolicitacoes->num_rows === 0): ?>
+            <p>Você não tem solicitações de adoção pendentes.</p>
+          <?php endif; ?>
+          
+          <?php while ($solicitacao = $resultSolicitacoes->fetch_assoc()): ?>
+            <div class="animal-item animal-card">
+              <div class="animal-card-image">
+                <img src="<?= htmlspecialchars($solicitacao['foto']) ?>" alt="<?= htmlspecialchars($solicitacao['nome']) ?>">
+              </div>
+              <div class="animal-card-content">
+                <strong><?= htmlspecialchars($solicitacao['nome']) ?></strong>
+                <p><strong>Espécie:</strong> <?= htmlspecialchars($solicitacao['especie']) ?></p>
+                <p><strong>Porte:</strong> <?= htmlspecialchars($solicitacao['porte']) ?></p>
+                <p><strong>Idade:</strong> <?= htmlspecialchars($solicitacao['idade']) ?> anos</p>      
+                <p><strong>Status:</strong> <?= htmlspecialchars($solicitacao['status']) ?></p>          
+              </div>
+            </div>
+          <?php endwhile; ?>          
+        </div>
       </div>
 
       <!-- LOGOUT -->
